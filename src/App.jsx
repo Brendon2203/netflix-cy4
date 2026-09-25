@@ -1,10 +1,15 @@
-import Navbar from "./components/navbar"
-function App(){
-  return(
-    <div>
-      <Navbar/>
-      <h1>Minha pagina </h1>
-    </div>
-  )
+import Navbar from "./components/navbar";
+import MovieList from "./components/MovieList";
+
+function App() {
+
+  return (
+    <>
+      <Navbar />
+
+      <MovieList />
+    </>
+  );
 }
-export default App
+
+export default App;
