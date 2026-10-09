@@ -67,3 +67,18 @@ body{
     cursor: pointer;
 }
 
+.login-card input:focus {
+  outline: 2px solid #7c5cff;
+  border-color: transparent;
+}
+
+.login-card button:hover {
+  background: #6242e8;
+}
+
+.login-card a {
+  text-align: center;
+  color: #6242e8;
+  text-decoration: none;
+  margin-top: 5px;
+}
