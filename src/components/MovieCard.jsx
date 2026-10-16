@@ -1,15 +1,10 @@
-import React from "react";
-
-function MovieCard({ filme, isSelected, onClick }) {
+function MovieCard({ filme }) {
   return (
-    <div 
-      className={`movie-card ${isSelected ? "selected" : ""}`}
-      onClick={onClick}
-    >
-      <img src={filme.imagem} alt={filme.titulo} />
-      {isSelected && filme.badge && (
-        <span className="badge">{filme.badge}</span>
-      )}
+    <div className="movie-card">
+      <img
+        src={filme.imagem}
+        alt={filme.titulo}
+      />
     </div>
   );
 }

@@ -29,10 +29,24 @@ function Navbar() {
 
   return (
     <div className="container">
+      {/* LOGO (Movida para o começo ou mantida onde preferir) */}
+      <img
+        className="img-logo"
+        src="https://www.pngarts.com/files/1/Netflix-Logo-PNG-Transparent-Image.png"
+        alt="logo"
+      />
+
+      {/* BOTÕES DA NAVBAR */}
+      <div className="box-btn">
+        <button className="btn-icone">🔍︎</button>
+        <button>Início</button>
+        <button className="desktop-only">Séries</button>
+        <button className="desktop-only">Filmes</button>
+        <button className="desktop-only">Minha Lista</button>
+      </div>
 
       {/* SELETOR DE PERFIL */}
       <div className="perfil-container">
-
         <button
           className="perfil-button"
           onClick={() => setAberto(!aberto)}
@@ -42,13 +56,11 @@ function Navbar() {
             src={perfil.imagem}
             alt={perfil.nome}
           />
-
           <span className="seta">▼</span>
         </button>
 
         {aberto && (
           <div className="menu-perfis">
-
             {perfis.map((item) => (
               <div
                 className="perfil-opcao"
@@ -59,32 +71,12 @@ function Navbar() {
                   src={item.imagem}
                   alt={item.nome}
                 />
-
                 <span>{item.nome}</span>
               </div>
             ))}
-
           </div>
         )}
-
       </div>
-
-      {/* BOTÕES DA NAVBAR */}
-      <div className="box-btn">
-        <button>🔍︎</button>
-        <button>Início</button>
-        <button>Séries</button>
-        <button>Filmes</button>
-        <button>Minha Lista</button>
-      </div>
-
-      {/* LOGO */}
-      <img
-        className="img-logo"
-        src="https://www.pngarts.com/files/1/Netflix-Logo-PNG-Transparent-Image.png"
-        alt="logo"
-      />
-
     </div>
   );
 }

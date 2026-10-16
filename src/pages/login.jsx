@@ -20,24 +20,25 @@ function Login() {
   return (
     <div className="login-container">
       <form className="login-card" onSubmit={handleLogin}>
+        <img src="https://agenciapnz.com/wp-content/uploads/Logo-Netflix.png" alt="logo" />
         <h1>Bem-vindo</h1>
         <p>Entre na sua conta</p>
 
-        <label htmlFor="email">E-mail</label>
+        
         <input
           id="email"
           type="email"
-          placeholder="Digite o seu e-mail"
+          placeholder="Email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           required
         />
 
-        <label htmlFor="senha">Senha</label>
+        
         <input
           id="senha"
           type="password"
-          placeholder="Digite a sua senha"
+          placeholder="Password"
           value={senha}
           onChange={(event) => setSenha(event.target.value)}
           required

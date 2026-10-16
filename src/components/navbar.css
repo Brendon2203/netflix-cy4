@@ -4,10 +4,41 @@
   justify-content: space-between;
   padding: 15px 30px;
   background-color: #000;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ---------------- LOGO ---------------- */
+.img-logo {
+  width: 70px;
+  object-fit: contain;
+}
+
+/* ---------------- BOTÕES ---------------- */
+.box-btn {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.box-btn button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: all 0.2s ease;
+}
+
+.box-btn button:hover {
+  color: #aaa;
+  background-color: rgb(48, 48, 48);
+  border-radius: 4px;
 }
 
 /* ---------------- PERFIL ---------------- */
-
 .perfil-container {
   position: relative;
 }
@@ -15,57 +46,45 @@
 .perfil-button {
   display: flex;
   align-items: center;
-  gap: 7px;
-
+  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 .img-perfil {
-  width: 35px;
-  height: 35px;
-
+  width: 32px;
+  height: 32px;
   object-fit: cover;
   border-radius: 4px;
 }
 
 .seta {
   color: white;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 /* MENU QUE ABRE */
-
 .menu-perfis {
   position: absolute;
-
   top: 45px;
-  left: 0;
-
-  width: 170px;
-
+  right: 0; /* Alinhado à direita para não vazar a tela do celular */
+  left: auto;
+  width: 160px;
   background-color: #181818;
-
   border: 1px solid #333;
-
   padding: 8px 0;
-
   z-index: 100;
+  border-radius: 4px;
 }
 
 /* CADA PERFIL */
-
 .perfil-opcao {
   display: flex;
   align-items: center;
-
   gap: 10px;
-
   padding: 8px 12px;
-
   color: white;
-
   cursor: pointer;
 }
 
@@ -74,11 +93,9 @@
 }
 
 .perfil-opcao img {
-  width: 35px;
-  height: 35px;
-
+  width: 30px;
+  height: 30px;
   object-fit: cover;
-
   border-radius: 4px;
 }
 
@@ -86,32 +103,28 @@
   font-size: 14px;
 }
 
-/* ---------------- BOTÕES ---------------- */
+/* ---------------- RESPONSIVIDADE (CELULARES) ---------------- */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px 15px; /* Reduz as margens laterais no mobile */
+  }
 
-.box-btn {
-  display: flex;
-  gap: 20px;
-}
+  .img-logo {
+    width: 50px; /* Diminui levemente a logo */
+  }
 
-.box-btn button {
-  background: none;
-  border: none;
+  .box-btn {
+    gap: 8px; /* Reduz o espaço entre os botões */
+  }
 
-  color: white;
+  .box-btn button {
+    font-size: 13px; /* Letras menores para caber na tela */
+    padding: 4px 6px;
+  }
 
-  font-size: 16px;
-
-  cursor: pointer;
-}
-
-.box-btn button:hover {
-  color: #aaa;
-  background-color: rgb(48, 48, 48);
-  border-radius: 16px;
-}
-
-/* ---------------- LOGO ---------------- */
-
-.img-logo {
-  width: 50px;
+  /* Esconde opções menos usadas em telas muito pequenas se preferir, 
+     ou mantém caso queira exibir tudo de forma compacta */
+  .desktop-only {
+    display: none; 
+  }
 }
