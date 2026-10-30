@@ -1,0 +1,149 @@
+
+.hero {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      #080808 0%,
+      rgba(8, 8, 8, 0.9) 30%,
+      rgba(8, 8, 8, 0.2) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #080808 0%,
+      transparent 50%
+    ),
+    url("https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1800")
+      center 35% / cover no-repeat;
+
+  color: white;
+}
+
+.hero-content {
+  max-width: 650px;
+  padding: 50px 30px;
+}
+
+.netflix-series {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ddd;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.netflix-n {
+  color: #e50914;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(28px, 4vw, 54px);
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+.play-triangle {
+  color: #e50914;
+  font-size: 0.7em;
+}
+
+.hero-metadata {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.match {
+  color: #46d369;
+}
+
+.tvma,
+.hd {
+  border: 1px solid #777;
+  padding: 3px 7px;
+  border-radius: 3px;
+}
+
+.tvma {
+  background: #444;
+}
+
+.hero-subtitle {
+  font-size: 23px;
+  margin-top: 22px;
+}
+
+.hero-description {
+  max-width: 560px;
+  color: #ccc;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.play-button,
+.more-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.play-button {
+  color: #111;
+  background: white;
+}
+
+.more-button {
+  color: white;
+  background: #555;
+}
+
+.play-button:hover {
+  background: #ddd;
+}
+
+.more-button:hover {
+  background: #777;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero-content {
+    padding: 30px 18px;
+  }
+
+  .hero-title {
+    letter-spacing: 1px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+}
