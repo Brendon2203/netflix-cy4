@@ -1,11 +1,16 @@
-function MovieCard({ filme }) {
+function MovieCard({ filme, onSelectMovie }) {
   return (
-    <div className="movie-card">
+    <button
+      type="button"
+      className="movie-card"
+      onClick={() => onSelectMovie(filme)}
+      aria-label={`Selecionar filme ${filme.titulo}`}
+    >
       <img
         src={filme.imagem}
         alt={filme.titulo}
       />
-    </div>
+    </button>
   );
 }
 

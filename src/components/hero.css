@@ -4,26 +4,34 @@
   min-height: 600px;
   display: flex;
   align-items: center;
-
-  background:
-    linear-gradient(
-      90deg,
-      #080808 0%,
-      rgba(8, 8, 8, 0.9) 30%,
-      rgba(8, 8, 8, 0.2) 100%
-    ),
-    linear-gradient(
-      0deg,
-      #080808 0%,
-      transparent 50%
-    ),
-    url("https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1800")
-      center 35% / cover no-repeat;
-
+  overflow: hidden;
   color: white;
 }
 
+.hero-backdrop,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-backdrop {
+  object-fit: cover;
+  object-position: center 35%;
+  z-index: 0;
+}
+
+.hero-overlay {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0.86) 30%, rgba(8, 8, 8, 0.18) 100%),
+    linear-gradient(0deg, #080808 0%, transparent 55%);
+}
+
 .hero-content {
+  position: relative;
+  z-index: 2;
   max-width: 650px;
   padding: 50px 30px;
 }
@@ -51,6 +59,7 @@
   font-size: clamp(28px, 4vw, 54px);
   font-weight: 400;
   letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .play-triangle {

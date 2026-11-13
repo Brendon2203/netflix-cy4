@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext.jsx";
 import "./navbar.css";
 
 function Navbar() {
   const [aberto, setAberto] = useState(false);
+  const { logout } = useAuth();
+  const navigate = useNavigate();
   const [perfil, setPerfil] = useState({
     nome: "Carlos",
     imagem:
@@ -25,6 +29,11 @@ function Navbar() {
   function selecionarPerfil(novoPerfil) {
     setPerfil(novoPerfil);
     setAberto(false);
+  }
+
+  function handleLogout() {
+    logout();
+    navigate("/login", { replace: true });
   }
 
   return (
@@ -74,6 +83,9 @@ function Navbar() {
                 <span>{item.nome}</span>
               </div>
             ))}
+            <button className="logout-button" onClick={handleLogout}>
+              Sair
+            </button>
           </div>
         )}
       </div>
